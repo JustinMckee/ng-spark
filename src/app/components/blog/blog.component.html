@@ -1,0 +1,12 @@
+<p>
+  blog works!
+</p>
+<div *ngIf="loading">Loading</div>
+<div *ngIf="blogItems.length && !loading">
+  <div *ngFor="let item of blogItems">
+    <a routerLink="{{item.path}}">
+      <h2>{{item.title}}</h2>
+    </a>
+  </div>
+</div>
+<button (click)="logBlogsArray()">Click</button>

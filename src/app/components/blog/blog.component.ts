@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../../services/blog/blog.service';
-import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
+
 
 import { BlogItem } from '../../services/blog/blog.model';
 

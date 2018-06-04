@@ -5,6 +5,9 @@ import {
   RouterModule,
   Routes
 } from '@angular/router';
+import { MaterialThemeModule } from './material-theme/material-theme.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppComponent } from './app.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
@@ -14,6 +17,9 @@ import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { SingleBlogComponent } from './components/single-blog/single-blog.component';
+import { NavigationComponent } from './navigation/navigation.component';
+
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,12 +41,16 @@ const routes: Routes = [
     ServicesComponent,
     ContactComponent,
     BlogComponent,
-    SingleBlogComponent
+    SingleBlogComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    MaterialThemeModule,
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
